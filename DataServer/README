@@ -1,0 +1,14 @@
+Code contained here is designed to run on a node.js enabled server. 
+You should run tail2socket.js to set up the WebSockets and then use various
+means to append data to the feed.
+
+i.e.
+
+./testData.sh MegaMapFeed 5 & 
+
+This will spawn a background process that will append test data to 
+MegaMapFeed every 5 seconds
+
+node tail2socket.js MegaMapFeed 8000 &
+This will spawn a background process that tails the MegaMapFeed file out to 
+WebSocket clients connected on port 8000
